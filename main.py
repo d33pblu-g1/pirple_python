@@ -1,5 +1,5 @@
 """
-printing the 
+printing the
 Favourite band program
 """
 
@@ -22,3 +22,5 @@ print (Guitarist)
 print (Bassist)
 print (DJ)
 print (Drummer)
+
+#making changes to the main.py
