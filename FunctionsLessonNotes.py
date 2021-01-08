@@ -28,3 +28,8 @@ else:
 
 if Pajamas == "Unknown":
     print("i dont know if you are wearing pajamas")
+
+a = "b"
+if True or True:
+     a = "a"
+print(a * 2)
