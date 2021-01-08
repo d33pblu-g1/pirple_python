@@ -25,3 +25,6 @@ if Sleepy == True:
     print("you are sleepy")
 else:
     print("you are not sleepy")
+
+if Pajamas == "Unknown":
+    print("i dont know if you are wearing pajamas")
