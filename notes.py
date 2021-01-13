@@ -78,6 +78,17 @@ fav_number = 25
 print("my favourite number is " + str(fav_number))
 print("\n")
 
+#convert number received from an input into an intiger
+number1 = input("enter a number: ")
+number2 = input("enter another number: ")
+result1 = number1 + number2
+result2 = int(number1) + int(number2)
+print("number1 + number2 :")
+print(result1)
+print("int(number1)+int(number2) :")
+print(result2)
+
+
 #absolute values
 print(abs(-5))
 print("\n")
@@ -121,16 +132,11 @@ print(int(num1)+int(num2))
 ################################################################################
 ################################################################################
 
-#name = input("enter name:")
-#print("I Love you "+name)
+name = input("enter your name:")
+print("Hi "+name)
 
-################################################################################
-################################################################################
-#####
-##### Numbers
-#####
-################################################################################
-################################################################################
+
+
 
 
 ################################################################################
@@ -191,6 +197,73 @@ print(ShoppingList)
 ################################################################################
 
 
+################################################################################
+################################################################################
+#####
+##### Loops
+#####
+################################################################################
+################################################################################
+
+# FOR LOOPS
+Word = "hello"
+
+for w in Word:
+    print(w)
+    if w == "e":
+        print("what a funny letter")
+
+
+list = [1,2,3]
+counterl = 0
+for w in list:
+    print(list[counterl])
+    counterl +=1
+
+
+# ranges
+# range(start,stopping,increment steps)
+for num in range(10):
+    print(num)
+
+#example all odd numbers
+for num in range(1,100,2):
+    print(num)
+#example 2
+for num in range(-100,-1,2):
+    print(num)
+
+# WHILE LOOPS
+
+counter = 1
+while (counter <10):
+    print(counter)
+    counter += 1
+
+# break
+listOfNames = ["Mike","Pauline","Kai","Summer","Sophie"]
+
+for x in range(len(listOfNames)):
+    if listOfNames[x] == "Summer":
+        break
+print(x+1)
+
+# another example
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+    i += 1
+
+# continue - stop and continue the loop (do not execute from here on)
+
+for number in range(10):
+    if number%2 == 0:
+        print(str(number) + " is even")
+        continue # skip the rest
+    print(str(number) + " is odd")
+
 
 
 ################################################################################
@@ -202,3 +275,16 @@ print(ShoppingList)
 ################################################################################
 # print("#######")
 # print("ASD"+"\n")
+
+################################################################################
+################################################################################
+#####
+##### examples
+#####
+################################################################################
+################################################################################
+
+num1 = input("enter the first number: ")
+num2 = input("Enter a second number: ")
+result = int(num1) + int(num2)
+print(result)
