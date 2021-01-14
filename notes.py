@@ -57,6 +57,11 @@ print(First_name)
 var = "10"
 print("asd"+"asd"+var)
 
+# to print on the same Line
+print("this will be on the same line as ",end="")
+print("this line")
+
+
 ################################################################################
 ################################################################################
 #####
@@ -221,7 +226,7 @@ for w in list:
     counterl +=1
 
 
-# ranges
+# RANGE
 # range(start,stopping,increment steps)
 for num in range(10):
     print(num)
@@ -233,6 +238,11 @@ for num in range(1,100,2):
 for num in range(-100,-1,2):
     print(num)
 
+# example 3
+X = 'abcd'
+for i in range(len(X)):
+    print(i)
+
 # WHILE LOOPS
 
 counter = 1
@@ -240,7 +250,7 @@ while (counter <10):
     print(counter)
     counter += 1
 
-# break
+# break - is used to terminate the loop
 listOfNames = ["Mike","Pauline","Kai","Summer","Sophie"]
 
 for x in range(len(listOfNames)):
@@ -255,6 +265,7 @@ while True:
         break
     print(i)
     i += 1
+
 
 # continue - stop and continue the loop (do not execute from here on)
 

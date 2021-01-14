@@ -1,8 +1,9 @@
-number1 = input("enter a number: ")
-number2 = input("enter another number: ")
-result1 = number1 + number2
-result2 = int(number1) + int(number2)
-print("number1 + number2 :")
-print(result1)
-print("int(number1)+int(number2) :")
-print(result2)
+f = 1
+A = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+for i in range(0, 3):
+     f =f*i
+     for j in range(0, 3):
+         print(i)
+         print(f)
+         A[i][j] = f
+print(A)
