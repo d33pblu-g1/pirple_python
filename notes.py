@@ -250,6 +250,10 @@ while (counter <10):
     print(counter)
     counter += 1
 
+# Infinite loops
+while(True)
+# the above also means while(true == true)
+
 # break - is used to terminate the loop
 listOfNames = ["Mike","Pauline","Kai","Summer","Sophie"]
 
@@ -277,6 +281,78 @@ for number in range(10):
 
 
 
+################################################################################
+################################################################################
+#####
+##### SETS
+#####
+################################################################################
+################################################################################
+
+# sets remove duplicates
+sets = {"element1", "element2", "element1", "element4"}
+print(sets)
+
+#example
+CountryList = []
+for i in range(5):
+    Country = input("Please enter your country:")
+    CountryList.append(Country)
+
+CountrySet = set(CountryList)
+
+print(CountryList)
+print(CountrySet)
+
+if "Brazil" in CountrySet
+    print("Yes")
+
+################################################################################
+################################################################################
+#####
+##### Dictionary
+#####
+################################################################################
+################################################################################
+
+
+dic1 = {"key1":"value1","key2":"Value2","key3":"Value3"}
+print(dic1)
+
+
+# EXAMPLE 1
+CountryList = []
+for i in range(5):
+    Country = input("Please enter your country:")
+    CountryList.append(Country)
+
+
+CountryDictionary = {}
+
+for Country in CountryList:
+    if Country in CountryDictionary:
+            CountryDictionary[Country] += 1
+    else:
+        CountryDictionary[Country] = 1
+
+print(CountryDictionary)
+
+# EXAMPLE 2
+
+BlackShoes = {42:2,41:3,40:4,39:1,38:0}
+print(BlackShoes)
+while(True):
+    purchaseSize = int(input("Which shoe size would you like to buy?\n"))
+    if purchaseSize < 0:
+        break
+    if BlackShoes[purchaseSize] > 0:
+        BlackShoes[purchaseSize] -= 1
+    else:
+        print("No shoes in stock")
+    print(BlackShoes)
+
+
+print(BlackShoes)
 ################################################################################
 ################################################################################
 #####
