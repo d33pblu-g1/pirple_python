@@ -251,7 +251,8 @@ while (counter <10):
     counter += 1
 
 # Infinite loops
-while(True)
+while(True):
+    continue
 # the above also means while(true == true)
 
 # break - is used to terminate the loop
@@ -304,7 +305,7 @@ CountrySet = set(CountryList)
 print(CountryList)
 print(CountrySet)
 
-if "Brazil" in CountrySet
+if "Brazil" in CountrySet:
     print("Yes")
 
 ################################################################################
@@ -353,6 +354,33 @@ while(True):
 
 
 print(BlackShoes)
+
+
+# to list the keys of a Dictionary use the list() function
+Band = {"Name":"Linkin Park","Genre":"Rock","Formed":"1996","Vocalist":"Mike Shinoda","Guitarist":"Brad Delson","Bassist":"Dave Farrell","DJ":"Joe Hahn","Drummer":"Rob Bourdon"}
+keys = list(Band.keys())
+print(keys)
+
+################################################################################
+################################################################################
+#####
+##### FILES
+#####
+################################################################################
+################################################################################
+# print("#######")
+# print("ASD"+"\n")
+
+# "r" = read
+# "w" = write
+# "a" = append
+# "r+" = read and write
+
+File = open("Filename","r") # "r", "w", "a", "r+"
+File.close()
+
+
+
 ################################################################################
 ################################################################################
 #####
