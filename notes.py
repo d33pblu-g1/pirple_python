@@ -377,7 +377,85 @@ print(keys)
 # "r+" = read and write
 
 File = open("Filename","r") # "r", "w", "a", "r+"
-File.close()
+File.close() # always remember to close the file
+
+# example 1
+VacationSpots = ["London","Paris","New York", "Rome","Utah"]
+VacationFile = open("VacationPlaces","w")
+
+for Spots in VacationSpots:
+    VacationFile.write(Spots+"\n") # must be a string
+
+VacationFile.close()  # always remember to close the file
+
+FileToRead = open("VacationPlaces","r")
+
+TheWholeFile = FileToRead.read()
+print(TheWholeFile)
+FileToRead.close()  # always remember to close the file
+
+# Example 2
+FileToRead = open("VacationPlaces","r")
+
+FirstLine = FileToRead.readline() #This will move the cursor to the end of the first line
+print(FirstLine)
+
+SecondLine = FileToRead.readline() #This will move the cursor to the end of the second line
+print(SecondLine)
+
+for line in FileToRead:
+    print(line,end = "")
+
+FileToRead.close()  # always remember to close the file
+
+FinalSpot = "Cyprus"
+FileToAppend = open("VacationPlaces","a")
+FileToAppend.write(FinalSpot)
+FileToAppend.close()  # always remember to close the file
+
+FileToRead = open("VacationPlaces","r")
+for line in FileToRead:
+    print(line,end = "")
+FileToRead.close()  # always remember to close the file
+
+#another way to open a file (without having to close it in the end)
+
+with open("VacationPlaces","r") as FileToRead:
+    for line in FileToRead:
+        print(line)
+
+# example 3
+ParticipantNumber = 2
+ParticipantData = []
+RegisteredParticipants = 0
+OutputFile = open("ParticipantData.txt","w")
+
+while(RegisteredParticipants < ParticipantNumber):
+
+    tempPartData = []
+
+    name = input("please enter your name: ")
+    tempPartData.append(name)
+
+    country = input("please enter your country: ")
+    tempPartData.append(country)
+
+    age = int(input("please enter your age: "))
+    tempPartData.append(age)
+
+    ParticipantData.append(tempPartData)
+
+    RegisteredParticipants += 1
+
+for participant in ParticipantData:
+    for data in participant:
+        OutputFile.write(str(data)) # use string because we cannot write integers
+        OutputFile.write(" ") # put a space after each data
+    OutputFile.write("\n") # add a line at the end of each participant
+
+OutputFile.close()  # always remember to close the file
+
+print(ParticipantData)
 
 
 
