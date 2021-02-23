@@ -27,6 +27,7 @@ UserInputCol = 0
 CheckStringHor = ""
 CheckStringVer = ""
 CheckStringDia = ""
+CheckStringDiaDown = ""
 
 Result = ""
 
@@ -144,6 +145,25 @@ def MakeDiaStr():
                     r+=1
                     c+=1
 
+def MakeDiaDownStr():
+    global CheckStringDiaDown
+    global BoardRows
+    global BoardCols
+    for a in range(BoardRows):
+    # 6 lopps (as many as the rows)
+        #print("a=",a)
+        for b in range(BoardCols,0,-1):
+     # 7 loops (as many as the columns)
+            #print("b=",b)
+            r=a
+            c=b
+            for bb in range(BoardCols):
+                # 7 loops (as many as the columns)
+                if r < BoardRows and 0 <= c < BoardCols:
+                    CheckStringDiaDown = CheckStringDiaDown + currentField[r][c]
+                    #print(bb)
+                    r+=1
+                    c-=1
 
 def CheckWinRules():
     #make a string made up with all the horizontal plays
@@ -151,9 +171,11 @@ def CheckWinRules():
     #make a string made up with all the horizontal plays
     MakeVerStr()
     MakeDiaStr()
+    MakeDiaDownStr()
     CheckWin(CheckStringHor)
     CheckWin(CheckStringVer)
     CheckWin(CheckStringDia)
+    CheckWin(CheckStringDiaDown)
     # CheckVer()
     # CheckDia()
 
