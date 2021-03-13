@@ -109,8 +109,10 @@ def MakeHorStr():
     global CheckStringHor
     CheckStringHor = ""
     for i in currentField:
+        CheckStringHor = CheckStringHor + "."
         for j in i:
             CheckStringHor = CheckStringHor + j
+
 
 def MakeVerStr():
     global CheckStringVer
@@ -122,6 +124,7 @@ def MakeVerStr():
         for i in range(BoardRows):
             CheckStringVer = CheckStringVer + currentField[i][ColsCounter]
         ColsCounter += 1
+        CheckStringVer = CheckStringVer + "."
 
 def MakeDiaStr():
     global CheckStringDia
@@ -144,6 +147,7 @@ def MakeDiaStr():
                     #print(bb)
                     r+=1
                     c+=1
+            CheckStringDia = CheckStringDia + "."
 
 def MakeDiaDownStr():
     global CheckStringDiaDown
@@ -164,6 +168,7 @@ def MakeDiaDownStr():
                     #print(bb)
                     r+=1
                     c-=1
+            CheckStringDiaDown = CheckStringDiaDown + "."
 
 def CheckWinRules():
     #make a string made up with all the horizontal plays
@@ -185,9 +190,13 @@ def CheckWin(CheckString):
     if CheckString.find("XXXX") > -1:
         Result = "Player 1 - X WON"
         print(Result)
+        # debug
+        print("debug",debug,  CheckString)
     elif CheckString.find("OOOO") > -1:
         Result = "Player 2 - O WON"
         print(Result)
+        # debug
+        print("debug",debug, CheckString)
 
 
 while Result =="":
