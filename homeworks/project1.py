@@ -11,10 +11,36 @@
 import os
 from time import sleep
 
-# First Set up the board size
-# boardsize = input("what is the board size")
-BoardCols = 7
-BoardRows = 6
+
+
+IsValueAcceptable = False
+input1 = ""
+#enter Value
+
+# check if integer
+while IsValueAcceptable == False:
+    input1 = input("please enter number between 1 and 12 for the COLUMNS ")
+    try:
+        BoardCols  = int(input1)
+        IsValueAcceptable = True
+    except ValueError:
+        print("computer says NO!")
+        continue
+
+IsValueAcceptable = False
+input1 = ""
+#enter Value
+
+# check if integer
+while IsValueAcceptable == False:
+    input1 = input("please enter number between 1 and 12 for the ROWS ")
+    try:
+        BoardRows  = int(input1)
+        IsValueAcceptable = True
+    except ValueError:
+        print("computer says NO!")
+        continue
+
 
 
 #set player 1 to start
@@ -191,12 +217,12 @@ def CheckWin(CheckString):
         Result = "Player 1 - X WON"
         print(Result)
         # debug
-        print("debug",debug,  CheckString)
+        # print("debug",debug,  CheckString)
     elif CheckString.find("OOOO") > -1:
         Result = "Player 2 - O WON"
         print(Result)
         # debug
-        print("debug",debug, CheckString)
+        # print("debug",debug, CheckString)
 
 
 while Result =="":
