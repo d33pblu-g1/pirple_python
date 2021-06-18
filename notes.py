@@ -114,6 +114,7 @@ print("\n")
 print("to round a number use round()")
 print("eg round(3.7)")
 print(round(3.7))
+x = round(5.76543, 2) #round to 2 decimal places
 print("\n")
 
 # round down
